@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Environment Variables";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Environment Variables</h1>
+</div>
+<input type="text" id="filter" placeholder="filter" onkeyup="filter()"/>
+<table class="table table-sm table-striped" id="variables">
+    @foreach(var item in Model.EnvironmentVariables)
+    {
+        <tr class="env" data-key="@item.Key">
+            <td>@item.Key</td>
+            <td>@item.Value</td>
+        </tr>
+    }
+</table>
