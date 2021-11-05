@@ -37,7 +37,14 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - ShowMeMyEnvironmentVariables - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <b>.NET Version</b><span>@System.Environment.Version</span>
+            @{
+                var netCoreVer = System.Environment.Version;
+                var runtimeVer = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+            }
+        </div>
+        <div class="container">
+            <b>Framework description</b><span>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</span>
         </div>
     </footer>
 

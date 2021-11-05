@@ -9,6 +9,18 @@
 </div>
 <input type="text" id="filter" placeholder="filter" onkeyup="filter()"/>
 <table class="table table-sm table-striped" id="variables">
+    <tr>
+        <td>
+            .NET Version:
+        </td>
+        <td>@System.Environment.Version</td>
+    </tr>
+    <tr>
+        <td>
+            .NET Description:
+        </td>
+        <td>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</td>
+    </tr>
     @foreach(var item in Model.EnvironmentVariables)
     {
         <tr class="env" data-key="@item.Key">
@@ -17,3 +29,5 @@
         </tr>
     }
 </table>
+
+<p>&nbsp;</p>
