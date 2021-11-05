@@ -35,18 +35,6 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <b>.NET Version</b><span>@System.Environment.Version</span>
-            @{
-                var netCoreVer = System.Environment.Version;
-                var runtimeVer = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
-            }
-        </div>
-        <div class="container">
-            <b>Framework description</b><span>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</span>
-        </div>
-    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
